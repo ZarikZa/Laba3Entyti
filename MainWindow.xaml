@@ -1,0 +1,30 @@
+﻿<Window x:Class="laba3EF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba3EF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="datygridy" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" Grid.ColumnSpan="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Clients.ClientName}" Header="Имя клиента"/>
+                <DataGridTextColumn Binding="{Binding Clients.ClientSurname}" Header="Фамилия клиента"/>
+                <DataGridTextColumn Binding="{Binding Clients.ClientMiddleName}" Header="Отчество клиента"/>
+                <DataGridTextColumn Binding="{Binding Unitazs.UnitaziName}" Header="Название унитаза"/>
+                <DataGridTextColumn Binding="{Binding Unitazs.UnitazTypes.UnitazType}" Header="Тип унитаза"/>
+                <DataGridTextColumn Binding="{Binding Unitazs.UnitazPrice}" Header="Цена унитаза"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
